@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 using Proiect_Fis.Data;
+using Proiect_Fis.Interface;
 using Proiect_Fis.Models;
 
 namespace Proiect_Fis
@@ -25,7 +26,8 @@ namespace Proiect_Fis
 
         private void btnVizualizareProduse_Click(object sender, EventArgs e)
         {
-            VizualizareProduse();
+            CatalogSistemeForm form = new CatalogSistemeForm();
+            form.Show();
         }
 
         private void btnDepunereComanda_Click(object sender, EventArgs e)
