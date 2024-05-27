@@ -102,7 +102,7 @@ namespace Proiect_Fis
             {
                 using (var context = new ApplicationDbContext())
                 {
-                    var produs = new Produs { Descriere = "Descriere Produs", Pret = 100, Scor = 5 };
+                    var produs = new Produs { Descriere = "Descriere Produs", Pret = 100, Scor = 5, Nume="Memorie Kingston FURY Beast 16GB DDR4" };
                     context.Produse.Add(produs);
                     context.SaveChanges();
                 }
@@ -120,7 +120,7 @@ namespace Proiect_Fis
             {
                 using (var context = new ApplicationDbContext())
                 {
-                    var produs = new Produs { Descriere = "Descriere Piesă", Pret = 50, Scor = 4.5f };
+                    var produs = new Produs { Descriere = "Descriere Piesă", Pret = 50, Scor = 4.5f};
                     context.Produse.Add(produs);
                     context.SaveChanges();
                 }

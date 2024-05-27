@@ -14,5 +14,7 @@ namespace Proiect_Fis.Models
         public string Descriere { get; set; }
         public float Pret { get; set; }
         public float Scor { get; set; }
+
+        public string Nume { get; set; }
     }
 }

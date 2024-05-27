@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proiect_Fis.Interface;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,7 +32,8 @@ namespace Proiect_Fis
 
         private void btnCatalogSist_Click(object sender, EventArgs e)
         {
-            // Cod pentru catalogul sistemelor electronice
+            CatalogSistemeForm form=new CatalogSistemeForm();
+            form.Show();
             VizualizareProduse();
         }
 
