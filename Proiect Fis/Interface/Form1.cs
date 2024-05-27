@@ -16,5 +16,51 @@ namespace Proiect_Fis
         {
             InitializeComponent();
         }
+
+        private void btnManagerSignIn_Click(object sender, EventArgs e)
+        {
+            ManagerOptionsForm managerForm = new ManagerOptionsForm();
+            managerForm.Show();
+        }
+
+        private void btnContAngajat_Click(object sender, EventArgs e)
+        {
+            EmployeeOptionsForm employeeForm = new EmployeeOptionsForm();
+            employeeForm.Show();
+        }
+
+        private void btnCatalogSist_Click(object sender, EventArgs e)
+        {
+            // Cod pentru catalogul sistemelor electronice
+            VizualizareProduse();
+        }
+
+        private void btnCatalogPC_Click(object sender, EventArgs e)
+        {
+            // Cod pentru catalogul pieselor PC
+            VizualizareProduse();
+        }
+
+        private void btnService_Click(object sender, EventArgs e)
+        {
+            // Cod pentru gestionarea cererilor de service
+            DepunereCerereService();
+        }
+
+        private void btnClientSignIn_Click(object sender, EventArgs e)
+        {
+            ClientOptionsForm clientForm = new ClientOptionsForm();
+            clientForm.Show();
+        }
+
+        private void VizualizareProduse()
+        {
+            MessageBox.Show("Produse vizualizate!");
+        }
+
+        private void DepunereCerereService()
+        {
+            MessageBox.Show("Cerere de service depusă!");
+        }
     }
 }

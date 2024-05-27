@@ -54,6 +54,7 @@
             this.btnCatalogSist.TabIndex = 1;
             this.btnCatalogSist.Text = "Catalog Sisteme Electronice";
             this.btnCatalogSist.UseVisualStyleBackColor = true;
+            this.btnCatalogSist.Click += new System.EventHandler(this.btnCatalogSist_Click);
             // 
             // btnCatalogPC
             // 
@@ -63,6 +64,7 @@
             this.btnCatalogPC.TabIndex = 2;
             this.btnCatalogPC.Text = "Catalog Piese PC";
             this.btnCatalogPC.UseVisualStyleBackColor = true;
+            this.btnCatalogPC.Click += new System.EventHandler(this.btnCatalogPC_Click);
             // 
             // btnService
             // 
@@ -72,6 +74,7 @@
             this.btnService.TabIndex = 3;
             this.btnService.Text = "Service";
             this.btnService.UseVisualStyleBackColor = true;
+            this.btnService.Click += new System.EventHandler(this.btnService_Click);
             // 
             // btnClientSignIn
             // 
@@ -81,6 +84,7 @@
             this.btnClientSignIn.TabIndex = 4;
             this.btnClientSignIn.Text = "Intra In Cont - Client";
             this.btnClientSignIn.UseVisualStyleBackColor = true;
+            this.btnClientSignIn.Click += new System.EventHandler(this.btnClientSignIn_Click);
             // 
             // btnManagerSignIn
             // 
@@ -90,6 +94,7 @@
             this.btnManagerSignIn.TabIndex = 5;
             this.btnManagerSignIn.Text = "Cont Manager";
             this.btnManagerSignIn.UseVisualStyleBackColor = true;
+            this.btnManagerSignIn.Click += new System.EventHandler(this.btnManagerSignIn_Click);
             // 
             // btnContAngajat
             // 
@@ -99,6 +104,7 @@
             this.btnContAngajat.TabIndex = 6;
             this.btnContAngajat.Text = "Cont Angajat";
             this.btnContAngajat.UseVisualStyleBackColor = true;
+            this.btnContAngajat.Click += new System.EventHandler(this.btnContAngajat_Click);
             // 
             // Form1
             // 
