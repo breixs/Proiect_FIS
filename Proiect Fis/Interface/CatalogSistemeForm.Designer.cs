@@ -28,60 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ProdusNumeLabel1 = new System.Windows.Forms.Label();
-            this.ProdusDescriereLabel1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // ProdusNumeLabel1
+            // pictureBox3
             // 
-            this.ProdusNumeLabel1.AutoSize = true;
-            this.ProdusNumeLabel1.Location = new System.Drawing.Point(71, 302);
-            this.ProdusNumeLabel1.Name = "ProdusNumeLabel1";
-            this.ProdusNumeLabel1.Size = new System.Drawing.Size(35, 13);
-            this.ProdusNumeLabel1.TabIndex = 0;
-            this.ProdusNumeLabel1.Text = "label1";
+            this.pictureBox3.Image = global::Proiect_Fis.Properties.Resources.tastatura;
+            this.pictureBox3.Location = new System.Drawing.Point(958, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(261, 258);
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
             // 
-            // ProdusDescriereLabel1
+            // pictureBox2
             // 
-            this.ProdusDescriereLabel1.AutoSize = true;
-            this.ProdusDescriereLabel1.Location = new System.Drawing.Point(71, 338);
-            this.ProdusDescriereLabel1.Name = "ProdusDescriereLabel1";
-            this.ProdusDescriereLabel1.Size = new System.Drawing.Size(35, 13);
-            this.ProdusDescriereLabel1.TabIndex = 1;
-            this.ProdusDescriereLabel1.Text = "label1";
+            this.pictureBox2.Image = global::Proiect_Fis.Properties.Resources.imprimanta;
+            this.pictureBox2.Location = new System.Drawing.Point(501, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(261, 258);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Proiect_Fis.Properties.Resources.ram1;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Image = global::Proiect_Fis.Properties.Resources.download;
+            this.pictureBox1.Location = new System.Drawing.Point(56, 40);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(299, 274);
+            this.pictureBox1.Size = new System.Drawing.Size(261, 195);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.HorizontalScrollbar = true;
+            this.listBox1.Location = new System.Drawing.Point(12, 287);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(359, 134);
+            this.listBox1.TabIndex = 9;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.HorizontalScrollbar = true;
+            this.listBox2.Location = new System.Drawing.Point(452, 287);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(359, 134);
+            this.listBox2.TabIndex = 10;
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.HorizontalScrollbar = true;
+            this.listBox3.Location = new System.Drawing.Point(895, 287);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(359, 134);
+            this.listBox3.TabIndex = 11;
             // 
             // CatalogSistemeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1365, 753);
+            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.ProdusDescriereLabel1);
-            this.Controls.Add(this.ProdusNumeLabel1);
             this.Name = "CatalogSistemeForm";
             this.Text = "CatalogSistemeForm";
             this.Load += new System.EventHandler(this.CatalogSistemeForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label ProdusNumeLabel1;
-        private System.Windows.Forms.Label ProdusDescriereLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBox3;
     }
 }
