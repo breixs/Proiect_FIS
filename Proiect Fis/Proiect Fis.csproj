@@ -99,11 +99,6 @@
     <Compile Include="Interface\ManagerOptionsForm.Designer.cs">
       <DependentUpon>ManagerOptionsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202405262341386_InitialCreate.cs" />
-    <Compile Include="Migrations\202405262341386_InitialCreate.Designer.cs">
-      <DependentUpon>202405262341386_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Angajat.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Comanda.cs" />
@@ -131,9 +126,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\ManagerOptionsForm.resx">
       <DependentUpon>ManagerOptionsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202405262341386_InitialCreate.resx">
-      <DependentUpon>202405262341386_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
