@@ -76,7 +76,8 @@ namespace Proiect_Fis.Models
                     Descriere = descriere,
                     Pret = pret,
                     Scor = scor,
-                    Nume = nume
+                    Nume = nume,
+                    Categorie = categorie
                 };
                 context.Produse.Add(produs);
                 context.SaveChanges();
