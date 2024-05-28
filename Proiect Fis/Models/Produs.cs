@@ -77,7 +77,5 @@ namespace Proiect_Fis.Models
                 context.SaveChanges();
             }
         }
-
-
     }
 }

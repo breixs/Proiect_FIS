@@ -28,15 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox3 = new System.Windows.Forms.ListBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.produsIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pretDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produsBindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox3
@@ -93,11 +105,73 @@
             this.listBox3.Size = new System.Drawing.Size(359, 134);
             this.listBox3.TabIndex = 11;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.produsIdDataGridViewTextBoxColumn,
+            this.descriereDataGridViewTextBoxColumn,
+            this.pretDataGridViewTextBoxColumn,
+            this.scorDataGridViewTextBoxColumn,
+            this.numeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.produsBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 29);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1259, 335);
+            this.dataGridView1.TabIndex = 12;
+            // 
+            // produsIdDataGridViewTextBoxColumn
+            // 
+            this.produsIdDataGridViewTextBoxColumn.DataPropertyName = "ProdusId";
+            this.produsIdDataGridViewTextBoxColumn.HeaderText = "ProdusId";
+            this.produsIdDataGridViewTextBoxColumn.Name = "produsIdDataGridViewTextBoxColumn";
+            // 
+            // descriereDataGridViewTextBoxColumn
+            // 
+            this.descriereDataGridViewTextBoxColumn.DataPropertyName = "Descriere";
+            this.descriereDataGridViewTextBoxColumn.HeaderText = "Descriere";
+            this.descriereDataGridViewTextBoxColumn.Name = "descriereDataGridViewTextBoxColumn";
+            // 
+            // pretDataGridViewTextBoxColumn
+            // 
+            this.pretDataGridViewTextBoxColumn.DataPropertyName = "Pret";
+            this.pretDataGridViewTextBoxColumn.HeaderText = "Pret";
+            this.pretDataGridViewTextBoxColumn.Name = "pretDataGridViewTextBoxColumn";
+            // 
+            // scorDataGridViewTextBoxColumn
+            // 
+            this.scorDataGridViewTextBoxColumn.DataPropertyName = "Scor";
+            this.scorDataGridViewTextBoxColumn.HeaderText = "Scor";
+            this.scorDataGridViewTextBoxColumn.Name = "scorDataGridViewTextBoxColumn";
+            // 
+            // numeDataGridViewTextBoxColumn
+            // 
+            this.numeDataGridViewTextBoxColumn.DataPropertyName = "Nume";
+            this.numeDataGridViewTextBoxColumn.HeaderText = "Nume";
+            this.numeDataGridViewTextBoxColumn.Name = "numeDataGridViewTextBoxColumn";
+            // 
+            // produsBindingSource
+            // 
+            this.produsBindingSource.DataSource = typeof(Proiect_Fis.Models.Produs);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 427);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1271, 370);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Toate Produsele";
+            // 
             // CatalogSistemeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1365, 753);
+            this.ClientSize = new System.Drawing.Size(1365, 809);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
@@ -110,6 +184,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produsBindingSource)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -121,5 +198,13 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn produsIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriereDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pretDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn scorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource produsBindingSource;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
