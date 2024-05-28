@@ -64,7 +64,7 @@ namespace Proiect_Fis.Models
                 {
                     MessageBox.Show("Eroare in pula mea!");
                 }
-            }
+            } 
         }
 
     }
