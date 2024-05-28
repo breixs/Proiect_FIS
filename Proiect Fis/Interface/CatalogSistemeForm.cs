@@ -22,53 +22,31 @@ namespace Proiect_Fis.Interface
 
         private void ChangeLabel(Label labelNume, Label labelDescriere, int id)
         {
-            using (var context = new ApplicationDbContext())
-            {
-                var numeProdus = context.Produse
-                           .Where(p => p.ProdusId == id)
-                           .Select(p => p.Nume)
-                           .FirstOrDefault();
-                labelNume.Text = numeProdus;
+            //using (var context = new ApplicationDbContext())
+            ///{
+              //  var numeProdus = context.Produse
+              //             .Where(p => p.ProdusId == id)
+              //             .Select(p => p.Nume)
+              //             .FirstOrDefault();
+               // labelNume.Text = numeProdus;
 
-                var descriereProdus = context.Produse.Where(p => p.ProdusId == id).Select(p => p.Descriere).FirstOrDefault();
-                labelDescriere.Text= descriereProdus;   
-            }
+                //var descriereProdus = context.Produse.Where(p => p.ProdusId == id).Select(p => p.Descriere).FirstOrDefault();
+                //labelDescriere.Text= descriereProdus;   
+            //}
         }
-
-        private void ChangeList(ListBox listbox, int id)
-        {
-            using (var context = new ApplicationDbContext())
-            {
-                var specificatiiProdus = context.Produse
-                           .Where(p => p.ProdusId == id)
-                           .Select(p => new { p.Nume, p.Pret, p.Scor, p.Descriere})
-                           .ToList();
-                listbox.Items.Clear(); // Clear existing items if necessary
-
-                foreach (var item in specificatiiProdus)
-                {
-                    List<string> itemDetails = new List<string>();
-
-                    itemDetails.Add($"Nume: {item.Nume}");
-                    itemDetails.Add($"Pret: {item.Pret}");
-                    itemDetails.Add($"Scor: {item.Scor}");
-                    itemDetails.Add($"Descriere: {item.Descriere}");
-
-                    foreach (string detail in itemDetails)
-                    {
-                        listbox.Items.Add(detail);
-                    }
-                }
-            }
-        }
-
         private void CatalogSistemeForm_Load(object sender, EventArgs e)
         {
-            //ChangeLabel(ProdusNumeLabel1, ProdusDescriereLabel1, 1);
-            //ChangeLabel(ProdusNumeLabel2, ProdusDescriereLabel2, 2);
-            ChangeList(listBox1, 1);
-            ChangeList(listBox2, 2);
-            ChangeList(listBox3, 3);
+            List<Produs> produse = new List<Produs>();
+            produse.Add(new Produs(1));
+            produse.Add(new Produs(2));
+            produse.Add(new Produs(3));
+            Produs.afisareProduse(produse[0],listBox1, 1);
+            Produs.afisareProduse(produse[1], listBox2, 2);
+            Produs.afisareProduse(produse[2], listBox3, 3);
+
+            //ChangeList(listBox1, 1);
+            //ChangeList(listBox2, 2);
+            //ChangeList(listBox3, 3);
         }
     }
 }

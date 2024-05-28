@@ -13,5 +13,12 @@ namespace Proiect_Fis.Models
         public int ClientId { get; set; }
         public string Nume { get; set; }
         public bool ContCreat { get; set; }
+
+        //public Client(int clientId, string nume, bool contCreat)
+        //{
+           // ClientId = clientId;
+           // Nume = nume;
+           // ContCreat = contCreat;
+       // }
     }
 }

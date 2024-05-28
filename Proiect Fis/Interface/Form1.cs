@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proiect_Fis.Data;
+using Proiect_Fis.Models;
 
 namespace Proiect_Fis
 {
@@ -63,6 +65,15 @@ namespace Proiect_Fis
         private void DepunereCerereService()
         {
             MessageBox.Show("Cerere de service depusă!");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            List<Produs> produse = new List<Produs>();
+            produse.Add(new Produs(1));
+            produse.Add(new Produs(2));
+            produse.Add(new Produs(3));
+
         }
     }
 }

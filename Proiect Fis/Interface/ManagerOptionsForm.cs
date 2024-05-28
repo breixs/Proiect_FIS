@@ -98,20 +98,8 @@ namespace Proiect_Fis
 
         private void AdaugaProdus()
         {
-            try
-            {
-                using (var context = new ApplicationDbContext())
-                {
-                    var produs = new Produs { Descriere = "Descriere Produs", Pret = 100, Scor = 5, Nume= "Memorie Kingston FURY Beast 16GB DDR4" };
-                    context.Produse.Add(produs);
-                    context.SaveChanges();
-                }
-                MessageBox.Show("Produs adăugat!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("A apărut o eroare: " + ex.Message);
-            }
+            Produs.AdaugaProdus(Convert.ToInt32(produsIdTb.Text), descriereTB.Text, float.Parse(pretTB.Text), float.Parse(scorTB.Text), numeTB.Text);
+            MessageBox.Show("produs adaugat");
         }
 
         private void AdaugaPiesa()
@@ -120,9 +108,9 @@ namespace Proiect_Fis
             {
                 using (var context = new ApplicationDbContext())
                 {
-                    var produs = new Produs { Descriere = "Descriere Piesă", Pret = 50, Scor = 4.5f };
-                    context.Produse.Add(produs);
-                    context.SaveChanges();
+                    //var produs = new Produs { Descriere = "Descriere Piesă", Pret = 50, Scor = 4.5f };
+                    //context.Produse.Add(produs);
+                    //context.SaveChanges();
                 }
                 MessageBox.Show("Piesă adăugată!");
             }
