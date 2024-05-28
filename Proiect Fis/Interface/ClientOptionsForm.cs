@@ -16,12 +16,16 @@ namespace Proiect_Fis
 
         private void btnCreareCont_Click(object sender, EventArgs e)
         {
-            CreareCont();
+            //CreareCont();
+            ClientRegisterForm Form = new ClientRegisterForm();
+            Form.Show();
         }
 
         private void btnAutentificare_Click(object sender, EventArgs e)
         {
-            Autentificare();
+            //Autentificare();
+            ClientLogInForm Form = new ClientLogInForm();
+            Form.Show();
         }
 
         private void btnVizualizareProduse_Click(object sender, EventArgs e)
@@ -41,7 +45,7 @@ namespace Proiect_Fis
         }
 
         // Metodele Clientului
-        private void CreareCont()
+        /*private void CreareCont()
         {
             using (var context = new ApplicationDbContext())
             {
@@ -66,7 +70,7 @@ namespace Proiect_Fis
                     MessageBox.Show("Autentificare eșuată!");
                 }
             }
-        }
+        }*/
 
         private void VizualizareProduse()
         {
