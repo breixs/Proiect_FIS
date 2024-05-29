@@ -222,6 +222,18 @@
   <ItemGroup>
     <None Include="Resources\ramfresh2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\placavideo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\placadebaza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\placadebaza2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\placavideo2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
