@@ -18,7 +18,7 @@ namespace Proiect_Fis.Models
         public string Nume { get; set; }
         public string Parola { get; set; }
 
-        public static Client LoggedInUser { get; private set; }
+        public static Client LoggedInUser {get; private set; }
         public Client(int id)
         {
             using (var context = new ApplicationDbContext())
@@ -77,6 +77,11 @@ namespace Proiect_Fis.Models
             {
                 MessageBox.Show("Niciun utilizator logat!");
             }
+        }
+
+        public bool IsUserLoggedIn()
+        {
+            return LoggedInUser != null;
         }
 
         /*public void Cumpara(int produsId, bool preAsamblat)
