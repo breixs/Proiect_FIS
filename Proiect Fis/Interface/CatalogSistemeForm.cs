@@ -16,6 +16,8 @@ namespace Proiect_Fis.Interface
     public partial class CatalogSistemeForm : Form
     {
         public int idMax;
+        List<Produs> produse = new List<Produs>();
+        ProduseCosForm Form = new ProduseCosForm();
         public CatalogSistemeForm()
         {
             InitializeComponent();
@@ -30,7 +32,7 @@ namespace Proiect_Fis.Interface
                 MessageBox.Show(idMax.ToString());
             }
 
-            List<Produs> produse = new List<Produs>();
+            
            for(int i=1;i<=idMax;i++)
            {
                 produse.Add(new Produs(i));
@@ -60,5 +62,28 @@ namespace Proiect_Fis.Interface
             }
         }
 
+        private void HideNseek_Click(object sender, EventArgs e)
+        {
+            Produs selectedProdus = produse[0];
+            
+            Form.AddProductToListBox(selectedProdus);
+            Form.Show();
+        }
+
+        private void HideNseek2_Click(object sender, EventArgs e)
+        {
+            // ProduseCosForm Form = new ProduseCosForm();
+            Produs selectedProdus = produse[1];
+            Form.AddProductToListBox(selectedProdus);
+            Form.Show();
+        }
+
+        private void HideNseek3_Click(object sender, EventArgs e)
+        {
+            // ProduseCosForm Form = new ProduseCosForm();
+            Produs selectedProdus = produse[2];
+            Form.AddProductToListBox(selectedProdus);
+            Form.Show();
+        }
     }
 }

@@ -99,6 +99,12 @@
     <Compile Include="Interface\ClientRegisterForm.Designer.cs">
       <DependentUpon>ClientRegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\ProduseCosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\ProduseCosForm.Designer.cs">
+      <DependentUpon>ProduseCosForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interface\ViewEmployeesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\ClientRegisterForm.resx">
       <DependentUpon>ClientRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\ProduseCosForm.resx">
+      <DependentUpon>ProduseCosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\ViewEmployeesForm.resx">
       <DependentUpon>ViewEmployeesForm.cs</DependentUpon>

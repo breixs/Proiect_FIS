@@ -177,6 +177,7 @@
             this.HideNseek.TabIndex = 14;
             this.HideNseek.Text = "button1";
             this.HideNseek.UseVisualStyleBackColor = true;
+            this.HideNseek.Click += new System.EventHandler(this.HideNseek_Click);
             // 
             // HideNseek2
             // 
@@ -186,6 +187,7 @@
             this.HideNseek2.TabIndex = 15;
             this.HideNseek2.Text = "button1";
             this.HideNseek2.UseVisualStyleBackColor = true;
+            this.HideNseek2.Click += new System.EventHandler(this.HideNseek2_Click);
             // 
             // HideNseek3
             // 
@@ -195,6 +197,7 @@
             this.HideNseek3.TabIndex = 16;
             this.HideNseek3.Text = "button1";
             this.HideNseek3.UseVisualStyleBackColor = true;
+            this.HideNseek3.Click += new System.EventHandler(this.HideNseek3_Click);
             // 
             // CatalogSistemeForm
             // 
