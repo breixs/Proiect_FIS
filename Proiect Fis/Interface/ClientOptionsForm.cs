@@ -104,5 +104,10 @@ namespace Proiect_Fis
             // Implementarea cererii de service
             MessageBox.Show("Cerere de service depusă!");
         }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            Client.Logout();
+        }
     }
 }

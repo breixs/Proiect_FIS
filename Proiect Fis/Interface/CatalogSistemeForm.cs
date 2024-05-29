@@ -39,12 +39,18 @@ namespace Proiect_Fis.Interface
             Produs.afisareProduse(produse[2], listBox3, 3);
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.DataSource = produse;
-
-            HideNseek.Visible = false;
-
+         
             if(Client.LoggedInUser != null)
             {
                 HideNseek.Visible = true;
+                HideNseek2.Visible = true;
+                HideNseek3.Visible = true;
+            }
+            else
+            {
+                HideNseek.Visible = false;
+                HideNseek2.Visible = false;
+                HideNseek3.Visible = false;
             }
         }
 
