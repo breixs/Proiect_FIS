@@ -43,6 +43,7 @@ namespace Proiect_Fis.Models
             Categorie = categorie;
         }
 
+        public Produs() { }
         public void afisareProduse(ListBox listbox, int id)
         {
             string nume, descriere, categorie;

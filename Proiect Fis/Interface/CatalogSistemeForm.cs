@@ -65,24 +65,34 @@ namespace Proiect_Fis.Interface
         private void HideNseek_Click(object sender, EventArgs e)
         {
             Produs selectedProdus = produse[0];
-            
+            if (Form == null || Form.IsDisposed)
+            {
+                Form = new ProduseCosForm();
+            }
             Form.AddProductToListBox(selectedProdus);
             Form.Show();
         }
 
         private void HideNseek2_Click(object sender, EventArgs e)
         {
-            // ProduseCosForm Form = new ProduseCosForm();
+            
             Produs selectedProdus = produse[1];
+            if (Form == null || Form.IsDisposed)
+            {
+                Form = new ProduseCosForm();
+            }
             Form.AddProductToListBox(selectedProdus);
             Form.Show();
         }
 
         private void HideNseek3_Click(object sender, EventArgs e)
         {
-            // ProduseCosForm Form = new ProduseCosForm();
             Produs selectedProdus = produse[2];
-            Form.AddProductToListBox(selectedProdus);
+            if (Form == null || Form.IsDisposed)
+            {
+                Form = new ProduseCosForm();
+            }
+            Form.AddProductToListBox(selectedProdus);     
             Form.Show();
         }
     }
