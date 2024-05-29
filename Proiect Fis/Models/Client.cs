@@ -17,7 +17,6 @@ namespace Proiect_Fis.Models
         public int ClientId { get; set; }
         public string Nume { get; set; }
         public string Parola { get; set; }
-        public bool? LoggedIn { get; set; }
 
         public static Client LoggedInUser { get; private set; }
         public Client(int id)
@@ -72,7 +71,19 @@ namespace Proiect_Fis.Models
             } 
         }
 
-       
+
+        public static void Logout()
+        {
+            if (LoggedInUser != null)
+            {
+                LoggedInUser = null;
+                MessageBox.Show("Delogat!");
+            }
+            else
+            {
+                MessageBox.Show("Niciun utilizator logat!");
+            }
+        }
 
     }
 }

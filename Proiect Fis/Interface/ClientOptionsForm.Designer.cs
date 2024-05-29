@@ -33,6 +33,7 @@
             this.btnVizualizareProduse = new System.Windows.Forms.Button();
             this.btnDepunereComanda = new System.Windows.Forms.Button();
             this.btnDepunereCerereService = new System.Windows.Forms.Button();
+            this.Logout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCreareCont
@@ -47,7 +48,7 @@
             // 
             // btnAutentificare
             // 
-            this.btnAutentificare.Location = new System.Drawing.Point(37, 86);
+            this.btnAutentificare.Location = new System.Drawing.Point(37, 77);
             this.btnAutentificare.Name = "btnAutentificare";
             this.btnAutentificare.Size = new System.Drawing.Size(132, 23);
             this.btnAutentificare.TabIndex = 1;
@@ -57,7 +58,7 @@
             // 
             // btnVizualizareProduse
             // 
-            this.btnVizualizareProduse.Location = new System.Drawing.Point(37, 140);
+            this.btnVizualizareProduse.Location = new System.Drawing.Point(37, 151);
             this.btnVizualizareProduse.Name = "btnVizualizareProduse";
             this.btnVizualizareProduse.Size = new System.Drawing.Size(132, 23);
             this.btnVizualizareProduse.TabIndex = 2;
@@ -67,7 +68,7 @@
             // 
             // btnDepunereComanda
             // 
-            this.btnDepunereComanda.Location = new System.Drawing.Point(37, 184);
+            this.btnDepunereComanda.Location = new System.Drawing.Point(37, 196);
             this.btnDepunereComanda.Name = "btnDepunereComanda";
             this.btnDepunereComanda.Size = new System.Drawing.Size(132, 23);
             this.btnDepunereComanda.TabIndex = 3;
@@ -77,7 +78,7 @@
             // 
             // btnDepunereCerereService
             // 
-            this.btnDepunereCerereService.Location = new System.Drawing.Point(37, 234);
+            this.btnDepunereCerereService.Location = new System.Drawing.Point(37, 242);
             this.btnDepunereCerereService.Name = "btnDepunereCerereService";
             this.btnDepunereCerereService.Size = new System.Drawing.Size(132, 23);
             this.btnDepunereCerereService.TabIndex = 4;
@@ -85,11 +86,22 @@
             this.btnDepunereCerereService.UseVisualStyleBackColor = true;
             this.btnDepunereCerereService.Click += new System.EventHandler(this.btnDepunereCerereService_Click);
             // 
+            // Logout
+            // 
+            this.Logout.Location = new System.Drawing.Point(37, 115);
+            this.Logout.Name = "Logout";
+            this.Logout.Size = new System.Drawing.Size(132, 23);
+            this.Logout.TabIndex = 5;
+            this.Logout.Text = "Delogare";
+            this.Logout.UseVisualStyleBackColor = true;
+            this.Logout.Click += new System.EventHandler(this.Logout_Click);
+            // 
             // ClientOptionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Logout);
             this.Controls.Add(this.btnDepunereCerereService);
             this.Controls.Add(this.btnDepunereComanda);
             this.Controls.Add(this.btnVizualizareProduse);
@@ -108,5 +120,6 @@
         private System.Windows.Forms.Button btnVizualizareProduse;
         private System.Windows.Forms.Button btnDepunereComanda;
         private System.Windows.Forms.Button btnDepunereCerereService;
+        private System.Windows.Forms.Button Logout;
     }
 }
