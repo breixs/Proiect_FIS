@@ -15,28 +15,30 @@ namespace Proiect_Fis.Interface
 {
     public partial class CatalogSistemeForm : Form
     {
+        public int idMax;
         public CatalogSistemeForm()
         {
             InitializeComponent();
         }
 
         private void CatalogSistemeForm_Load(object sender, EventArgs e)
-        {        
-            List<Produs> produse = new List<Produs>
+        {
+            
+            using (var context = new ApplicationDbContext())
             {
-                new Produs(1),
-                new Produs(2),
-                new Produs(3),
-                new Produs(4),
-                new Produs(5),
-            };
+                idMax=context.Produse.Max(p => p.ProdusId);
+                MessageBox.Show(idMax.ToString());
+            }
 
+            List<Produs> produse = new List<Produs>();
+           for(int i=1;i<=idMax;i++)
+           {
+                produse.Add(new Produs(i));
+           }
 
-
-
-            Produs.afisareProduse(produse[0],listBox1, 1);
-            Produs.afisareProduse(produse[1], listBox2, 2);
-            Produs.afisareProduse(produse[2], listBox3, 3);
+            produse[0].afisareProduse(listBox1, 1);
+            produse[0].afisareProduse(listBox2, 2);
+            produse[2].afisareProduse(listBox3, 3);
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.DataSource = produse;
          

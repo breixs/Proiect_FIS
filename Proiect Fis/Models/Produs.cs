@@ -43,16 +43,16 @@ namespace Proiect_Fis.Models
             Categorie = categorie;
         }
 
-        public static void afisareProduse(Produs produs, ListBox listbox, int id)
+        public void afisareProduse(ListBox listbox, int id)
         {
             string nume, descriere, categorie;
             float pret, scor;
 
-            nume = produs.Nume;
-            descriere = produs.Descriere;
-            pret = produs.Pret;
-            scor = produs.Scor;
-            categorie = produs.Categorie;
+            nume = this.Nume;
+            descriere = this.Descriere;
+            pret = this.Pret;
+            scor = this.Scor;
+            categorie = this.Categorie;
             List<string> itemDetails = new List<string>();
 
             itemDetails.Add($"Nume: {nume}");
