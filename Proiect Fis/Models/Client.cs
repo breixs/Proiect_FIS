@@ -35,50 +35,22 @@ namespace Proiect_Fis.Models
         }
 
         public Client() { }
-
-        public static void CreareCont(string nume, string parola)
+    
+        public void CreareCont(Client client)
         {
             using (var context = new ApplicationDbContext())
-            {
-                var cont = new Client(nume, parola)
-                {
-                    Nume = nume,
-                    Parola = parola
-                };
-                context.Clienti.Add(cont);
+            {                           
+                context.Clienti.Add(client);
                 context.SaveChanges();
+                MessageBox.Show("Cont creat cu succes");
             }
         }
-
-        /*
-        public static void Login(string nume, string parola)
-        {
-            using (var context = new ApplicationDbContext())
-            {
-                //var user = context.Clienti.FirstOrDefault(c => c.Nume == nume);
-                //var password = context.Clienti.FirstOrDefault(c => c.Parola == parola);
-                var client = context.Clienti.FirstOrDefault(c => c.Nume == nume && c.Parola == parola);
-
-                if (client != null)
-                {
-                    MessageBox.Show("Autentificat!");
-                    LoggedInUser = client;              
-                }   
-                else
-                {
-                    MessageBox.Show("Eroare in pula mea!");
-                    LoggedInUser = null;
-                }
-            } 
-        }
-        */
-
+    
         public void Login()
         {
             using (var context = new ApplicationDbContext())
             {
-                //var user = context.Clienti.FirstOrDefault(c => c.Nume == nume);
-                //var password = context.Clienti.FirstOrDefault(c => c.Parola == parola);
+
                 var client = context.Clienti.FirstOrDefault(c => c.Nume == this.Nume && c.Parola == this.Parola);
 
                 if (client != null)
@@ -94,7 +66,7 @@ namespace Proiect_Fis.Models
             }
         }
 
-        public static void Logout()
+        public void Logout()
         {
             if (LoggedInUser != null)
             {
@@ -107,5 +79,24 @@ namespace Proiect_Fis.Models
             }
         }
 
+        public void Cumpara(int produsId, bool preAsamblat)
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                var articol = context.Produse.FirstOrDefault(a => a.ProdusId == produsId);
+                if (articol != null)
+                {
+                    float pretFinal = articol.Pret;
+                    if (preAsamblat)
+                    {
+                        pretFinal += 100;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Articolul nu a fost găsit!");
+                }
+            }
+        }
     }
 }

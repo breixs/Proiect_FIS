@@ -107,7 +107,8 @@ namespace Proiect_Fis
 
         private void Logout_Click(object sender, EventArgs e)
         {
-            Client.Logout();
+            var clientLogout = new Client();           
+            clientLogout.Logout();
         }
     }
 }
