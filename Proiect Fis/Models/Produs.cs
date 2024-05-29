@@ -106,7 +106,7 @@ namespace Proiect_Fis.Models
             this.promotie = promotieId;
         }
 
-        private bool hasPromotion()
+        public bool hasPromotion()
         {
             if (this.promotie != null)
                 return true;
