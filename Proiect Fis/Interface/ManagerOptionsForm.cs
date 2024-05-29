@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Windows.Forms;
@@ -38,7 +39,29 @@ namespace Proiect_Fis
 
         private void BtnPropunePromotie_Click(object sender, EventArgs e)
         {
-            Promotie.AdaugaPromotie(10);
+            int idMax;
+            Promotie promotie= new Promotie(1, 10);
+            List<Produs> produse = new List<Produs>();
+
+            using (var context = new ApplicationDbContext())
+            {
+                idMax = context.Produse.Max(p => p.ProdusId);
+                MessageBox.Show(idMax.ToString());
+            }
+
+            for (int i = 1; i <= idMax; i++)
+            {
+                produse.Add(new Produs(i));
+            }
+
+            foreach(Produs produs in produse)
+            {
+                if(produs.ProdusId==1)
+                {
+                    produs.adaugarePromotie(1);
+                }
+            }
+          
             MessageBox.Show("Promotie propusă!");
         }
 

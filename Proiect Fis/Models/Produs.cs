@@ -19,6 +19,7 @@ namespace Proiect_Fis.Models
         public float Scor { get; set; }
         public string Nume { get; set; }
         public string Categorie { get; set; }
+        public int? promotie { get; set; }
 
         public Produs(int id)
         {
@@ -48,6 +49,11 @@ namespace Proiect_Fis.Models
         {
             string nume, descriere, categorie;
             float pret, scor;
+
+            if (this.hasPromotion())
+            {
+                this.Pret += 0.10f * this.Pret;
+            }
 
             nume = this.Nume;
             descriere = this.Descriere;
@@ -94,5 +100,19 @@ namespace Proiect_Fis.Models
                 context.SaveChanges();
             }
         }
+
+        public void adaugarePromotie(int promotieId)
+        {
+            this.promotie = promotieId;
+        }
+
+        private bool hasPromotion()
+        {
+            if (this.promotie != null)
+                return true;
+
+            return false;
+        }
+
     }
 }

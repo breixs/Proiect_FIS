@@ -11,13 +11,17 @@ namespace Proiect_Fis.Models
         [Key]
         public int PromotieId { get; set; }
         public float Discount { get; set; }
-        public List<Produs> ProduseIncluse { get; set; }
 
-        public static void AdaugaPromotie(float discount)
+        public Promotie(int promotieId, float discount)
+        {
+            PromotieId = promotieId;
+            Discount = discount;
+        }
+
+        public void AdaugaPromotie(Promotie promotie)
         {
             using (var context = new ApplicationDbContext())
             {
-                var promotie = new Promotie { Discount = discount };
                 context.Promotii.Add(promotie);
                 context.SaveChanges();
             }
@@ -27,7 +31,7 @@ namespace Proiect_Fis.Models
         {
             using (var context = new ApplicationDbContext())
             {
-                return context.Promotii.Include(p => p.ProduseIncluse).ToList();
+                return context.Promotii.ToList();
             }
         }
 
@@ -43,5 +47,11 @@ namespace Proiect_Fis.Models
                 }
             }
         }
+
+        public void LinkPromotie(Produs produs)
+        {
+            produs.adaugarePromotie(PromotieId);
+        }
+
     }
 }
