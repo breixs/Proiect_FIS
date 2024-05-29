@@ -49,7 +49,8 @@ namespace Proiect_Fis.Models
                 context.SaveChanges();
             }
         }
-        
+
+        /*
         public static void Login(string nume, string parola)
         {
             using (var context = new ApplicationDbContext())
@@ -70,7 +71,28 @@ namespace Proiect_Fis.Models
                 }
             } 
         }
+        */
 
+        public void Login()
+        {
+            using (var context = new ApplicationDbContext())
+            {
+                //var user = context.Clienti.FirstOrDefault(c => c.Nume == nume);
+                //var password = context.Clienti.FirstOrDefault(c => c.Parola == parola);
+                var client = context.Clienti.FirstOrDefault(c => c.Nume == this.Nume && c.Parola == this.Parola);
+
+                if (client != null)
+                {
+                    MessageBox.Show("Autentificat!");
+                    LoggedInUser = client;
+                }
+                else
+                {
+                    MessageBox.Show("Eroare in pula mea!");
+                    LoggedInUser = null;
+                }
+            }
+        }
 
         public static void Logout()
         {

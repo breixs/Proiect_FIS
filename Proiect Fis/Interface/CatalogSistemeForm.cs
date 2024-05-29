@@ -36,9 +36,13 @@ namespace Proiect_Fis.Interface
                 produse.Add(new Produs(i));
            }
 
-            produse[0].afisareProduse(listBox1, 1);
-            produse[0].afisareProduse(listBox2, 2);
-            produse[2].afisareProduse(listBox3, 3);
+           if(produse.Count > 2)
+            {
+                produse[0].afisareProduse(listBox1, 1);
+                produse[1].afisareProduse(listBox2, 2);
+                produse[2].afisareProduse(listBox3, 3);
+            }
+                       
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.DataSource = produse;
          

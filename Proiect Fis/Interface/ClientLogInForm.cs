@@ -19,7 +19,8 @@ namespace Proiect_Fis.Interface
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Client.Login(LoginUser.Text,LoginParola.Text);
+            var clientLogin = new Client(LoginUser.Text, LoginParola.Text);
+            clientLogin.Login();
         }
     }
 }
