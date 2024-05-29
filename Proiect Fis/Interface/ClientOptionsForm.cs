@@ -110,5 +110,11 @@ namespace Proiect_Fis
             var clientLogout = new Client();           
             clientLogout.Logout();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CatalogPiese form = new CatalogPiese();
+            form.Show();
+        }
     }
 }

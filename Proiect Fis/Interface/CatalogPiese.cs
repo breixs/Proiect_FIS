@@ -27,7 +27,7 @@ namespace Proiect_Fis.Interface
             using (var context = new ApplicationDbContext())
             {
                 idMax = context.Produse.Max(p => p.ProdusId);
-                MessageBox.Show(idMax.ToString());
+               
             }
 
             for (int i = 1; i <= idMax; i++)

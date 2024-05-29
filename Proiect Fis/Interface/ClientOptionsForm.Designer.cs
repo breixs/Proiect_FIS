@@ -34,6 +34,7 @@
             this.btnDepunereComanda = new System.Windows.Forms.Button();
             this.btnDepunereCerereService = new System.Windows.Forms.Button();
             this.Logout = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCreareCont
@@ -68,7 +69,7 @@
             // 
             // btnDepunereComanda
             // 
-            this.btnDepunereComanda.Location = new System.Drawing.Point(37, 196);
+            this.btnDepunereComanda.Location = new System.Drawing.Point(37, 233);
             this.btnDepunereComanda.Name = "btnDepunereComanda";
             this.btnDepunereComanda.Size = new System.Drawing.Size(132, 23);
             this.btnDepunereComanda.TabIndex = 3;
@@ -78,7 +79,7 @@
             // 
             // btnDepunereCerereService
             // 
-            this.btnDepunereCerereService.Location = new System.Drawing.Point(37, 242);
+            this.btnDepunereCerereService.Location = new System.Drawing.Point(37, 271);
             this.btnDepunereCerereService.Name = "btnDepunereCerereService";
             this.btnDepunereCerereService.Size = new System.Drawing.Size(132, 23);
             this.btnDepunereCerereService.TabIndex = 4;
@@ -96,11 +97,22 @@
             this.Logout.UseVisualStyleBackColor = true;
             this.Logout.Click += new System.EventHandler(this.Logout_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(37, 191);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Vizualizare Piese";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ClientOptionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Logout);
             this.Controls.Add(this.btnDepunereCerereService);
             this.Controls.Add(this.btnDepunereComanda);
@@ -121,5 +133,6 @@
         private System.Windows.Forms.Button btnDepunereComanda;
         private System.Windows.Forms.Button btnDepunereCerereService;
         private System.Windows.Forms.Button Logout;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -54,5 +54,11 @@ namespace Proiect_Fis
             }
             MessageBox.Show("Statusul comenzii schimbat!");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var addEmployeeForm = new AddEmployeeForm();
+            addEmployeeForm.ShowDialog();
+        }
     }
 }

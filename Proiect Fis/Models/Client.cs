@@ -60,7 +60,7 @@ namespace Proiect_Fis.Models
                 }
                 else
                 {
-                    MessageBox.Show("Eroare in pula mea!");
+                    MessageBox.Show("Utilizatorul nu a fost gasit!");
                     LoggedInUser = null;
                 }
             }
