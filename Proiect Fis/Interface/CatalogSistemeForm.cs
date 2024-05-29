@@ -54,5 +54,22 @@ namespace Proiect_Fis.Interface
             }
         }
 
+        private void HideNseek_Click(object sender, EventArgs e)
+        {
+            ProduseCos Form = new ProduseCos();
+            Form.Show();
+        }
+
+        private void HideNseek2_Click(object sender, EventArgs e)
+        {
+            ProduseCos Form = new ProduseCos();
+            Form.Show();
+        }
+
+        private void HideNseek3_Click(object sender, EventArgs e)
+        {
+            ProduseCos Form = new ProduseCos();
+            Form.Show();
+        }
     }
 }

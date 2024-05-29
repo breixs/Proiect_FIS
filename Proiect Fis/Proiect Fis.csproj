@@ -87,6 +87,12 @@
     <Compile Include="Interface\ClientRegisterForm.Designer.cs">
       <DependentUpon>ClientRegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\ProduseCos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\ProduseCos.Designer.cs">
+      <DependentUpon>ProduseCos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interface\ViewEmployeesForm.cs">
       <SubType>Form</SubType>
     </Compile>
