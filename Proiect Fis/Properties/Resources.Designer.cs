@@ -103,6 +103,26 @@ namespace Proiect_Fis.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ramfresh {
+            get {
+                object obj = ResourceManager.GetObject("ramfresh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ramfresh2 {
+            get {
+                object obj = ResourceManager.GetObject("ramfresh2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tastatura {
             get {
                 object obj = ResourceManager.GetObject("tastatura", resourceCulture);

@@ -36,13 +36,12 @@ namespace Proiect_Fis
         {
             CatalogSistemeForm form=new CatalogSistemeForm();
             form.Show();
-            VizualizareProduse();
         }
 
         private void btnCatalogPC_Click(object sender, EventArgs e)
         {
-            // Cod pentru catalogul pieselor PC
-            VizualizareProduse();
+            CatalogPiese form = new CatalogPiese();
+            form.Show();
         }
 
         private void btnService_Click(object sender, EventArgs e)
