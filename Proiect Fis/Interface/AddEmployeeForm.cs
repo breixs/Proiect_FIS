@@ -22,31 +22,19 @@ namespace Proiect_Fis
 
         private void BtnSalveaza_Click(object sender, EventArgs e)
         {
-            string nume = txtNume.Text;
-            string categorie = cmbCategorie.SelectedItem?.ToString();
-
-            if (string.IsNullOrEmpty(nume) || string.IsNullOrEmpty(categorie))
+            if (string.IsNullOrWhiteSpace(txtNume.Text) || string.IsNullOrWhiteSpace(cmbCategorie.Text))
             {
-                MessageBox.Show("Te rog să completezi toate câmpurile.");
+                MessageBox.Show("Toate câmpurile sunt obligatorii.");
                 return;
             }
 
-            try
-            {
-                using (var context = new ApplicationDbContext())
-                {
-                    var angajat = new Angajat { Nume = nume, Categorie = categorie };
-                    context.Angajati.Add(angajat);
-                    context.SaveChanges();
-                }
+            Angajat.AdaugaAngajat(txtNume.Text, cmbCategorie.Text);
 
-                MessageBox.Show("Angajat adăugat cu succes!");
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("A apărut o eroare: " + ex.Message);
-            }
+            MessageBox.Show("Angajat adăugat cu succes!");
+
+
+            txtNume.Clear();
+            cmbCategorie.SelectedIndex = -1;
         }
 
         private void BtnAnuleaza_Click(object sender, EventArgs e)

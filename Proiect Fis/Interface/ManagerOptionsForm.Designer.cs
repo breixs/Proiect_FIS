@@ -35,6 +35,8 @@
             this.btnAdaugaProdus = new System.Windows.Forms.Button();
             this.btnAdaugaPiesa = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.categorieTB = new System.Windows.Forms.TextBox();
             this.numeTB = new System.Windows.Forms.TextBox();
             this.scorTB = new System.Windows.Forms.TextBox();
             this.pretTB = new System.Windows.Forms.TextBox();
@@ -45,9 +47,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.categorieTB = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.StergeAngajatBtn = new System.Windows.Forms.Button();
+            this.angajatIdTB = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAdaugaAngajat
@@ -72,7 +77,7 @@
             // 
             // btnPropunePromotie
             // 
-            this.btnPropunePromotie.Location = new System.Drawing.Point(12, 70);
+            this.btnPropunePromotie.Location = new System.Drawing.Point(12, 66);
             this.btnPropunePromotie.Name = "btnPropunePromotie";
             this.btnPropunePromotie.Size = new System.Drawing.Size(123, 23);
             this.btnPropunePromotie.TabIndex = 2;
@@ -82,7 +87,7 @@
             // 
             // btnStergePromotie
             // 
-            this.btnStergePromotie.Location = new System.Drawing.Point(12, 99);
+            this.btnStergePromotie.Location = new System.Drawing.Point(12, 95);
             this.btnStergePromotie.Name = "btnStergePromotie";
             this.btnStergePromotie.Size = new System.Drawing.Size(123, 23);
             this.btnStergePromotie.TabIndex = 3;
@@ -126,12 +131,28 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnAdaugaProdus);
-            this.groupBox1.Location = new System.Drawing.Point(13, 129);
+            this.groupBox1.Location = new System.Drawing.Point(12, 192);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(747, 201);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Adaugare Produse";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 157);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Categorie";
+            // 
+            // categorieTB
+            // 
+            this.categorieTB.Location = new System.Drawing.Point(65, 154);
+            this.categorieTB.Name = "categorieTB";
+            this.categorieTB.Size = new System.Drawing.Size(331, 20);
+            this.categorieTB.TabIndex = 15;
             // 
             // numeTB
             // 
@@ -213,27 +234,51 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "ProdusID";
             // 
-            // categorieTB
+            // StergeAngajatBtn
             // 
-            this.categorieTB.Location = new System.Drawing.Point(65, 154);
-            this.categorieTB.Name = "categorieTB";
-            this.categorieTB.Size = new System.Drawing.Size(331, 20);
-            this.categorieTB.TabIndex = 15;
+            this.StergeAngajatBtn.Location = new System.Drawing.Point(618, 22);
+            this.StergeAngajatBtn.Name = "StergeAngajatBtn";
+            this.StergeAngajatBtn.Size = new System.Drawing.Size(123, 23);
+            this.StergeAngajatBtn.TabIndex = 7;
+            this.StergeAngajatBtn.Text = "StergeAngajat";
+            this.StergeAngajatBtn.UseVisualStyleBackColor = true;
+            this.StergeAngajatBtn.Click += new System.EventHandler(this.StergeAngajatBtn_Click);
             // 
-            // label6
+            // angajatIdTB
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 157);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Categorie";
+            this.angajatIdTB.Location = new System.Drawing.Point(69, 22);
+            this.angajatIdTB.Name = "angajatIdTB";
+            this.angajatIdTB.Size = new System.Drawing.Size(327, 20);
+            this.angajatIdTB.TabIndex = 8;
+            this.angajatIdTB.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.angajatIdTB);
+            this.groupBox2.Controls.Add(this.StergeAngajatBtn);
+            this.groupBox2.Location = new System.Drawing.Point(12, 124);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(747, 62);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Sterge Angajat";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(11, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "AngajatId";
             // 
             // ManagerOptionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnStergePromotie);
             this.Controls.Add(this.btnPropunePromotie);
@@ -244,6 +289,8 @@
             this.Load += new System.EventHandler(this.ManagerOptionsForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -269,5 +316,9 @@
         private System.Windows.Forms.TextBox produsIdTb;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox categorieTB;
+        private System.Windows.Forms.Button StergeAngajatBtn;
+        private System.Windows.Forms.TextBox angajatIdTB;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label7;
     }
 }
