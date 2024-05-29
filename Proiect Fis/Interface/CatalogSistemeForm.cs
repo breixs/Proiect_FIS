@@ -21,7 +21,7 @@ namespace Proiect_Fis.Interface
         }
 
         private void CatalogSistemeForm_Load(object sender, EventArgs e)
-        {
+        {        
             List<Produs> produse = new List<Produs>
             {
                 new Produs(1),
@@ -39,6 +39,13 @@ namespace Proiect_Fis.Interface
             Produs.afisareProduse(produse[2], listBox3, 3);
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.DataSource = produse;
+
+            HideNseek.Visible = false;
+
+            if(Client.LoggedInUser != null)
+            {
+                HideNseek.Visible = true;
+            }
         }
 
     }

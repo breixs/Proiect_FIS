@@ -43,6 +43,7 @@
             this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.HideNseek = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -166,11 +167,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Toate Produsele";
             // 
+            // HideNseek
+            // 
+            this.HideNseek.Location = new System.Drawing.Point(124, 246);
+            this.HideNseek.Name = "HideNseek";
+            this.HideNseek.Size = new System.Drawing.Size(98, 35);
+            this.HideNseek.TabIndex = 14;
+            this.HideNseek.Text = "button1";
+            this.HideNseek.UseVisualStyleBackColor = true;
+            // 
             // CatalogSistemeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1365, 809);
+            this.Controls.Add(this.HideNseek);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.listBox2);
@@ -206,5 +217,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn numeDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource produsBindingSource;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button HideNseek;
     }
 }

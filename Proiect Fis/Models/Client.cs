@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using Proiect_Fis.Data;
 using Proiect_Fis.Interface;
 using System.Windows.Forms;
+using System.Runtime.CompilerServices;
 
 namespace Proiect_Fis.Models
 {
@@ -16,7 +17,9 @@ namespace Proiect_Fis.Models
         public int ClientId { get; set; }
         public string Nume { get; set; }
         public string Parola { get; set; }
+        public bool? LoggedIn { get; set; }
 
+        public static Client LoggedInUser { get; private set; }
         public Client(int id)
         {
             using (var context = new ApplicationDbContext())
@@ -59,13 +62,17 @@ namespace Proiect_Fis.Models
                 if (client != null)
                 {
                     MessageBox.Show("Autentificat!");
-                }
+                    LoggedInUser = client;              
+                }   
                 else
                 {
                     MessageBox.Show("Eroare in pula mea!");
+                    LoggedInUser = null;
                 }
             } 
         }
+
+       
 
     }
 }
