@@ -47,8 +47,9 @@ namespace Proiect_Fis
 
         private void btnService_Click(object sender, EventArgs e)
         {
-            // Cod pentru gestionarea cererilor de service
-            DepunereCerereService();
+            CerereForm form = new CerereForm();
+            form.Show();
+
         }
 
         private void btnClientSignIn_Click(object sender, EventArgs e)

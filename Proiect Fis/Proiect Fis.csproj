@@ -68,6 +68,12 @@
     <Compile Include="Interface\CatalogSistemeForm.Designer.cs">
       <DependentUpon>CatalogSistemeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\CerereForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\CerereForm.Designer.cs">
+      <DependentUpon>CerereForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interface\ClientLogInForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,7 @@
       <DependentUpon>ManagerOptionsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Angajat.cs" />
+    <Compile Include="Models\CerereClient.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Comanda.cs" />
     <Compile Include="Models\Produs.cs" />
@@ -123,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\CatalogSistemeForm.resx">
       <DependentUpon>CatalogSistemeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\CerereForm.resx">
+      <DependentUpon>CerereForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\ClientLogInForm.resx">
       <DependentUpon>ClientLogInForm.cs</DependentUpon>
