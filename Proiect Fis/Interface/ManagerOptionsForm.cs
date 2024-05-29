@@ -69,7 +69,8 @@ namespace Proiect_Fis
 
         private void AdaugaProdus()
         {
-            Produs.AdaugaProdus(Convert.ToInt32(produsIdTb.Text), descriereTB.Text, float.Parse(pretTB.Text), float.Parse(scorTB.Text), numeTB.Text, categorieTB.Text);
+            Produs produsNou=new Produs(Convert.ToInt32(produsIdTb.Text), descriereTB.Text, float.Parse(pretTB.Text), float.Parse(scorTB.Text), numeTB.Text, categorieTB.Text);
+            produsNou.adaugareNoua(produsNou);
             MessageBox.Show("produs adaugat");
         }
 

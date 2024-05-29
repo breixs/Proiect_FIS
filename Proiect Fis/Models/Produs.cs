@@ -66,7 +66,7 @@ namespace Proiect_Fis.Models
                 listbox.Items.Add(detail);
             }
         }
-
+        /*
         public static void AdaugaProdus(int produsId, string descriere, float pret, float scor, string nume, string categorie)
         {
             using (var context = new ApplicationDbContext())
@@ -79,6 +79,16 @@ namespace Proiect_Fis.Models
                     Nume = nume,
                     Categorie = categorie
                 };
+                context.Produse.Add(produs);
+                context.SaveChanges();
+            }
+        }
+        */
+
+        public void adaugareNoua(Produs produs)
+        {
+            using (var context = new ApplicationDbContext())
+            {
                 context.Produse.Add(produs);
                 context.SaveChanges();
             }
