@@ -15,14 +15,15 @@ namespace Proiect_Fis.Interface
     public partial class CatalogPiese : Form
     {
         public int idMax;
+        List<Produs> piese = new List<Produs>();
+        ProduseCosForm Form = new ProduseCosForm();
         public CatalogPiese()
         {
             InitializeComponent();
         }
 
         private void CatalogPiese_Load(object sender, EventArgs e)
-        {
-            List<Produs> piese = new List<Produs>();
+        {         
             using (var context = new ApplicationDbContext())
             {
                 idMax = context.Produse.Max(p => p.ProdusId);
@@ -41,7 +42,51 @@ namespace Proiect_Fis.Interface
                 piese[5].afisareProduse(listBox3, 6);
             }
 
+            if (Client.LoggedInUser != null)
+            {
+                button1.Visible = true;
+                button2.Visible = true;
+                button3.Visible = true;
+            }
+            else
+            {
+                button1.Visible = false;
+                button2.Visible = false;
+                button3.Visible = false;
+            }
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Produs selectedProdus = piese[3];
+            if (Form == null || Form.IsDisposed)
+            {
+                Form = new ProduseCosForm();
+            }
+            Form.AddProductToListBox(selectedProdus);
+            Form.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Produs selectedProdus = piese[4];
+            if (Form == null || Form.IsDisposed)
+            {
+                Form = new ProduseCosForm();
+            }
+            Form.AddProductToListBox(selectedProdus);
+            Form.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Produs selectedProdus = piese[5];
+            if (Form == null || Form.IsDisposed)
+            {
+                Form = new ProduseCosForm();
+            }
+            Form.AddProductToListBox(selectedProdus);
+            Form.Show();
         }
     }
 }

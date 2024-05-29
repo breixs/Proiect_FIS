@@ -79,7 +79,7 @@ namespace Proiect_Fis.Models
             }
         }
 
-        public void Cumpara(int produsId, bool preAsamblat)
+        /*public void Cumpara(int produsId, bool preAsamblat)
         {
             using (var context = new ApplicationDbContext())
             {
@@ -97,6 +97,6 @@ namespace Proiect_Fis.Models
                     MessageBox.Show("Articolul nu a fost găsit!");
                 }
             }
-        }
+        }*/
     }
 }

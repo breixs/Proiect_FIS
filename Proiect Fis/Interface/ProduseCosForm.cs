@@ -31,14 +31,29 @@ namespace Proiect_Fis.Interface
 
                 listBox1.Items.Remove(existingItem);
                 listBox1.Items.Add(produs.ProdusId + " - " + produs.Nume + " - Quantity: " + quantity + " - Price: " + produs.Pret + " - Total Cost of that Piece: " + totalCost);
-               
-                totalFinalCost += produs.Pret;
+                if (produs.Categorie == "Componenta")
+                {
+                    totalFinalCost += produs.Pret;
+                }
+                else
+                {
+                    totalFinalCost += produs.Pret + 100;
+                }
+                
                 label2.Text = "Total Cost: " + totalFinalCost;
             }
             else
             {
                 listBox1.Items.Add(produs.ProdusId + " - " + produs.Nume + " - Quantity: 1 - Price: " + produs.Pret + " - Total Cost: " + produs.Pret);
-                totalFinalCost += produs.Pret;
+                
+                if (produs.Categorie == "Componenta")
+                {
+                    totalFinalCost += produs.Pret;
+                }
+                else
+                {
+                    totalFinalCost += produs.Pret + 100;
+                }
                 label2.Text = "Total Cost: " + totalFinalCost;
             }
             
@@ -68,8 +83,20 @@ namespace Proiect_Fis.Interface
                     listBox1.Items.Add(produs.ProdusId + " - " + produs.Nume + " - Quantity: " + quantity + " - Price: " + produs.Pret + " - Total Cost of that Piece: " + totalCost);
                 }
 
-                totalFinalCost -= produs.Pret;
-                label2.Text = "Total Cost: " + totalFinalCost;
+                if (produs.Categorie == "Componenta")
+                {
+                    totalFinalCost -= produs.Pret;
+                }
+
+                else
+                {
+                    totalFinalCost -= produs.Pret + 100;
+                }
+
+                if (quantity != 0)
+                    label2.Text = "Total Cost: " + totalFinalCost;
+                else
+                    label2.Text = "Total Cost: 0";
             }
         }
 
