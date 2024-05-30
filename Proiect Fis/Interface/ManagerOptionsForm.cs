@@ -10,34 +10,42 @@ namespace Proiect_Fis
 {
     public partial class ManagerOptionsForm : Form
     {
+        public string AngajatNume { get; set; }
+        public string AngajatCategorie { get; set; }
+        public bool EmployeeFormVisible { get; set; }
+        public string ProdusNume { get; set; }
+        public string ProdusDescriere { get; set; }
+        public float ProdusPret { get; set; }
+        public float ProdusScor { get; set; }
+        public string ProdusCategorie { get; set; }
         public ManagerOptionsForm()
         {
             InitializeComponent();
         }
 
-        private void ManagerOptionsForm_Load(object sender, EventArgs e)
+        public void ManagerOptionsForm_Load(object sender, EventArgs e)
         {
            
         }
 
-        private void BtnAdaugaAngajat_Click(object sender, EventArgs e)
+        public void BtnAdaugaAngajat_Click(object sender, EventArgs e)
         {
             var addEmployeeForm = new AddEmployeeForm();
             addEmployeeForm.ShowDialog();
         }
 
-        private void BtnVizualizareAngajati_Click(object sender, EventArgs e)
+        public void BtnVizualizareAngajati_Click(object sender, EventArgs e)
         {
             var viewEmployeesForm = new ViewEmployeesForm();
             viewEmployeesForm.ShowDialog();
         }
 
-        private void BtnStergeAngajat_Click(object sender, EventArgs e)
+        public void BtnStergeAngajat_Click(object sender, EventArgs e)
         {
            
         }
 
-        private void BtnPropunePromotie_Click(object sender, EventArgs e)
+        public void BtnPropunePromotie_Click(object sender, EventArgs e)
         {
             int idMax;
             Promotie promotie= new Promotie(1, 10);
@@ -65,7 +73,7 @@ namespace Proiect_Fis
             MessageBox.Show("Promotie propusă!");
         }
 
-        private void BtnStergePromotie_Click(object sender, EventArgs e)
+        public void BtnStergePromotie_Click(object sender, EventArgs e)
         {
             var promotii = Promotie.VizualizeazaPromotii();
             if (promotii.Any())
@@ -79,25 +87,25 @@ namespace Proiect_Fis
             }
         }
 
-        private void BtnAdaugaProdus_Click(object sender, EventArgs e)
+        public void BtnAdaugaProdus_Click(object sender, EventArgs e)
         {
             AdaugaProdus();
         }
 
-        private void BtnAdaugaPiesa_Click(object sender, EventArgs e)
+        public void BtnAdaugaPiesa_Click(object sender, EventArgs e)
         {
             AdaugaPiesa();
         }
 
 
-        private void AdaugaProdus()
+        public void AdaugaProdus()
         {
             Produs produsNou=new Produs(Convert.ToInt32(produsIdTb.Text), descriereTB.Text, float.Parse(pretTB.Text), float.Parse(scorTB.Text), numeTB.Text, categorieTB.Text);
             produsNou.adaugareNoua(produsNou);
             MessageBox.Show("produs adaugat");
         }
 
-        private void AdaugaPiesa()
+        public void AdaugaPiesa()
         {
             try
             {
@@ -115,12 +123,12 @@ namespace Proiect_Fis
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        public void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void StergeAngajatBtn_Click(object sender, EventArgs e)
+        public void StergeAngajatBtn_Click(object sender, EventArgs e)
         {
             using (var context = new ApplicationDbContext())
             {
